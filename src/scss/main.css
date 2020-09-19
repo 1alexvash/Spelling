@@ -21,118 +21,88 @@ input {
 }
 
 .App {
-  font-family: Tahoma;
-}
-
-.App .Computer {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-x: scroll;
-  overflow-y: visible;
-  overflow: visible;
-  border: 1px solid black;
-  border-radius: 4px;
-  width: 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 480px;
+  padding: 20px;
+  -webkit-box-shadow: 2px 2px 4px #555;
+          box-shadow: 2px 2px 4px #555;
+  margin: auto;
 }
 
-.App .Computer .card {
-  width: 16.67%;
+@media (max-width: 540px) {
+  .App {
+    width: 100%;
+  }
 }
 
-.App .Computer .card img {
-  width: 100%;
-}
-
-.App .Battle-Field {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-  height: 300px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-box-shadow: 1px 2px 5px 1px #444;
-          box-shadow: 1px 2px 5px 1px #444;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.App .Battle-Field .card {
-  width: 16.7%;
-}
-
-.App .Battle-Field .card img {
-  width: 100%;
-}
-
-.App .Battle-Field .turn {
-  position: absolute;
-  bottom: 0;
-  font-size: 20px;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.App .Cards-Deck {
-  position: absolute;
-  left: 50px;
-  top: 50px;
-  width: 200px;
-}
-
-.App .Cards-Deck .card {
-  position: absolute;
-}
-
-.App .Cards-Deck .card img {
-  width: 100%;
-}
-
-.App .Player {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: visible;
-  overflow: visible;
-  border: 1px solid black;
-  border-radius: 4px;
-  width: 600px;
-}
-
-.App .Player .card {
-  width: 16.67%;
+.App .listen {
   cursor: pointer;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(red), to(#ff9999));
+  background: linear-gradient(red, #ff9999);
+  -webkit-box-shadow: 1px 1px 5px #777;
+          box-shadow: 1px 1px 5px #777;
 }
 
-.App .Player .card.active {
-  opacity: 0;
-  cursor: auto;
+.App .tip {
+  margin: 20px 0;
+  color: #777;
+  font-style: italic;
 }
 
-.App .Player .card:hover {
-  z-index: 1;
+.App .boxes {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.App .Player .card:hover img {
-  -webkit-box-shadow: 0 0 10px 2px deepskyblue;
-          box-shadow: 0 0 10px 2px deepskyblue;
+.App .boxes .box {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #333;
+  border: 1px solid black;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
 }
 
-.App .Player .card img {
-  width: 100%;
+.App .input {
+  margin-top: 20px;
+  cursor: pointer;
+  background: #f9f9f9;
+  -webkit-box-shadow: 1px 1px 5px #333;
+          box-shadow: 1px 1px 5px #333;
+  border-bottom: 1px solid #333;
+  padding: 8px 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .input:focus {
+  outline: none;
+  -webkit-box-shadow: 1px 1px 5px 1px #111;
+          box-shadow: 1px 1px 5px 1px #111;
+  border-color: deepskyblue;
 }

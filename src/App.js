@@ -10,13 +10,13 @@ const App = () => {
       <button className="listen"></button>
       <div className="tip">Click to listen the word again</div>
       <div className="boxes">
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
+        <div className="box">?</div>
+        <div className="box">?</div>
+        <div className="box">?</div>
+        <div className="box">?</div>
+        <div className="box">?</div>
       </div>
-      <div className="input"></div>
+      <input type="text" className="input" placeholder="Start typing" />
     </div>
   );
 };

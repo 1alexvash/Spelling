@@ -2,14 +2,62 @@
 @import "responsive";
 
 .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 480px;
+  padding: 20px;
+  box-shadow: 2px 2px 4px #555;
+  margin: auto;
+
+  @include responsive(540px) {
+    width: 100%;
+  }
   .listen {
+    cursor: pointer;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: linear-gradient(red, lighten(red, 30%));
+    box-shadow: 1px 1px 5px #777;
   }
   .tip {
+    margin: 20px 0;
+    color: #777;
+    font-style: italic;
   }
   .boxes {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
     .box {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      background: #333;
+      border: 1px solid black;
+      border-radius: 4px;
+      user-select: none;
+
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
     }
   }
   .input {
+    margin-top: 20px;
+    cursor: pointer;
+    background: lighten(lightgray, 15%);
+    box-shadow: 1px 1px 5px #333;
+    border-bottom: 1px solid #333;
+    padding: 8px 20px;
+    transition: 0.3s;
+    &:focus {
+      outline: none;
+      box-shadow: 1px 1px 5px 1px #111;
+      border-color: deepskyblue;
+    }
   }
 }
