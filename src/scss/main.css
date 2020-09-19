@@ -1,0 +1,138 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  width: 100%;
+}
+
+.App {
+  font-family: Tahoma;
+}
+
+.App .Computer {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: visible;
+  overflow: visible;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 600px;
+}
+
+.App .Computer .card {
+  width: 16.67%;
+}
+
+.App .Computer .card img {
+  width: 100%;
+}
+
+.App .Battle-Field {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 300px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 1px 2px 5px 1px #444;
+          box-shadow: 1px 2px 5px 1px #444;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.App .Battle-Field .card {
+  width: 16.7%;
+}
+
+.App .Battle-Field .card img {
+  width: 100%;
+}
+
+.App .Battle-Field .turn {
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.App .Cards-Deck {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 200px;
+}
+
+.App .Cards-Deck .card {
+  position: absolute;
+}
+
+.App .Cards-Deck .card img {
+  width: 100%;
+}
+
+.App .Player {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: visible;
+  overflow: visible;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 600px;
+}
+
+.App .Player .card {
+  width: 16.67%;
+  cursor: pointer;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.App .Player .card.active {
+  opacity: 0;
+  cursor: auto;
+}
+
+.App .Player .card:hover {
+  z-index: 1;
+}
+
+.App .Player .card:hover img {
+  -webkit-box-shadow: 0 0 10px 2px deepskyblue;
+          box-shadow: 0 0 10px 2px deepskyblue;
+}
+
+.App .Player .card img {
+  width: 100%;
+}
