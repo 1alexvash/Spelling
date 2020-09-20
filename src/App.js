@@ -7,6 +7,12 @@ import microImg from "./images/micro.png";
 const ramdomWords = ["apple", "orange", "pear", "plumb", "kiwi"];
 
 const App = () => {
+  function getRandomWord() {
+    const random = Math.floor(Math.random() * ramdomWords.length);
+    const randomWord = ramdomWords[random];
+    console.log(randomWord);
+  }
+
   return (
     <div className="App">
       <img src={microImg} alt="" className="listen" />

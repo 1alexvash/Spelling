@@ -1,6 +1,6 @@
 Add Favicon
 Add logo
-Add listen button icon
+
 Find sounds
 
 Create level system
@@ -20,3 +20,5 @@ Good sound after typing correct word
 Bad sound after typing uncorrect word
 
 settings pop with extra settings like (names, cities, numbers)
+
+listen icon squizes on click and send a small wave
