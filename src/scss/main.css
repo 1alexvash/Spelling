@@ -67,6 +67,13 @@ body:before {
   background: linear-gradient(red, #ff9999);
   -webkit-box-shadow: 1px 1px 5px #777;
           box-shadow: 1px 1px 5px #777;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .listen:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .App .tip {

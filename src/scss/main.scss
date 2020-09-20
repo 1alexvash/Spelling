@@ -37,6 +37,10 @@ body {
     border-radius: 50%;
     background: linear-gradient(red, lighten(red, 30%));
     box-shadow: 1px 1px 5px #777;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .tip {
     margin: 20px 0;
