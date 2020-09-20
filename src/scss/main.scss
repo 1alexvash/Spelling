@@ -64,6 +64,9 @@ body {
       font-size: 32px;
       font-weight: bold;
       color: white;
+      &.active {
+        background: linear-gradient(lightgreen, green);
+      }
     }
   }
   .input {
