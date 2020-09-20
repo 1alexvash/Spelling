@@ -5,6 +5,10 @@ Create system for guessing correct word
 Create rewarding system for good and bad answers
 Find icon of trophy bar
 Create round progress bar
+Flash card notification on level
+Ability to turn off sound on typing
+
+Autofocus on input during the start of the game
 
 
 Find list words
@@ -19,3 +23,21 @@ Bad sound after typing uncorrect word
 settings pop with extra settings like (names, cities, numbers)
 
 listen icon squizes on click and send a small wave
+
+Levels system
+
+Level 1 = [0, 10]
+Level 2 = [10, 20]
+Level 3 = [20, 35]
+Level 4 = [35, 50]
+Level 5 = [50, 75]
+Level 6 = [75, 100]
+Level 7 = [100, 150]
+Level 8 = [200, 250]
+Level 9 = [250, 300]
+Level 10 = [300, 500]
+
++1 point for a correct letter
+-1 point for a mistake
++5 points for correct word
+
