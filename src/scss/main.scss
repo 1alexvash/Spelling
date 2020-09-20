@@ -1,10 +1,26 @@
 @import "reset";
 @import "responsive";
 
+body {
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/background.jpg");
+    opacity: 0.7;
+    z-index: -1;
+  }
+}
+
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: white;
 
   width: 480px;
   padding: 20px;
