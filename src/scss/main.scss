@@ -36,10 +36,21 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    text-align: center;
     img {
+      position: relative;
+      width: 48px;
+      border: 1px solid black;
+      border-radius: 50%;
+      background: darken(white, 5%);
+      z-index: 2;
     }
     .bar {
+      position: absolute;
+      top: 50%;
+      left: 40px;
+      transform: translate(0%, -50%);
+      z-index: 1;
+
       width: 80px;
       height: 12px;
       background: lighten(grey, 10%);
