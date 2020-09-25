@@ -17,6 +17,8 @@ body {
 }
 
 .App {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +31,27 @@ body {
 
   @include responsive(540px) {
     width: 100%;
+  }
+  .trophy {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+    img {
+    }
+    .bar {
+      width: 80px;
+      height: 12px;
+      background: lighten(grey, 10%);
+      border: 1px solid black;
+      box-shadow: 1px 1px 2px 3px rgba(black, 0.5);
+      border-radius: 10px;
+      .progress {
+        width: 33.33%;
+        height: 100%;
+        background: linear-gradient(45deg, blue, lighten(deepskyblue, 10%));
+      }
+    }
   }
   .listen {
     cursor: pointer;

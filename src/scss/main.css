@@ -34,6 +34,7 @@ body:before {
 }
 
 .App {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,6 +57,29 @@ body:before {
   .App {
     width: 100%;
   }
+}
+
+.App .trophy {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-align: center;
+}
+
+.App .trophy .bar {
+  width: 80px;
+  height: 12px;
+  background: #9a9a9a;
+  border: 1px solid black;
+  -webkit-box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.App .trophy .bar .progress {
+  width: 33.33%;
+  height: 100%;
+  background: linear-gradient(45deg, blue, #33ccff);
 }
 
 .App .listen {
