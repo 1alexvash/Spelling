@@ -60,6 +60,7 @@ const App = () => {
       </div>
       <input
         type="text"
+        autoFocus
         className="input"
         placeholder="Start typing"
         onChange={(e) => typing(e)}
