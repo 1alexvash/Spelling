@@ -2,8 +2,9 @@ import React, { useState } from "react";
 
 import "./scss/main.css";
 
+import Trophy from "./components/Trophy";
+
 import microImg from "./images/micro.png";
-import trophyImg from "./images/trophy.png";
 
 const ramdomWords = ["apple", "orange", "pear", "plumb", "kiwi"];
 
@@ -43,18 +44,9 @@ const App = () => {
     // console.log(letter);
   }
 
-  const TrophyComponent = (
-    <div className="trophy">
-      <img src={trophyImg} alt="" />
-      <div className="bar">
-        <div className="progress"></div>
-      </div>
-    </div>
-  );
-
   return (
     <div className="App">
-      {TrophyComponent}
+      <Trophy progress={22} />
       <img src={microImg} alt="" className="listen" />
       <div className="tip">Click to listen the word again</div>
       <div className="boxes">
