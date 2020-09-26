@@ -13,6 +13,8 @@ const App = () => {
   console.log("randomWord:", randomWord);
   const [inputWord, setInputWord] = useState("");
 
+  const [listenAnimate, setListenAnimate] = useState(false);
+
   function getRandomWord() {
     const random = Math.floor(Math.random() * ramdomWords.length);
     const randomWord = ramdomWords[random];
@@ -44,11 +46,27 @@ const App = () => {
     // console.log(letter);
   }
 
+  function listen() {
+    if (!listenAnimate) {
+      setListenAnimate(true);
+      setTimeout(() => {
+        setListenAnimate(false);
+      }, 4000);
+    }
+  }
+
   return (
     <div className="App">
       <Trophy progress={22} />
-      <img src={microImg} alt="" className="listen" />
-      <div className="tip">Click to listen the word again</div>
+      <img
+        src={microImg}
+        alt=""
+        className={`listen ${listenAnimate ? "animate" : ""}`}
+        onClick={() => listen()}
+      />
+      <div className={`tip ${listenAnimate ? "animate" : ""}`}>
+        Click to listen the word again
+      </div>
       <div className="boxes">
         {inputWord.split("").map((letter, index) => (
           <div className="box active" key={index}>

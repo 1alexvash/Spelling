@@ -74,11 +74,20 @@ body {
     &:hover {
       transform: scale(1.1);
     }
+    &.animate {
+      transition: 1s;
+      transform: scale(0.85);
+      filter: brightness(85%);
+    }
   }
   .tip {
     margin: 20px 0;
     color: #777;
     font-style: italic;
+    transition: 0.3s;
+    &.animate {
+      opacity: 0;
+    }
   }
   .boxes {
     width: 80%;
