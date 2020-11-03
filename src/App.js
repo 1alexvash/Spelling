@@ -6,11 +6,12 @@ import Trophy from "./components/Trophy";
 
 import microImg from "./images/micro.png";
 
+import number_0 from "./sounds/number_0.mp3";
+
 const ramdomWords = ["apple", "orange", "pear", "plumb", "kiwi"];
 
 const App = () => {
   const [randomWord, setRandomWord] = useState(getRandomWord());
-  console.log("randomWord:", randomWord);
   const [inputWord, setInputWord] = useState("");
 
   const [listenAnimate, setListenAnimate] = useState(false);
@@ -47,6 +48,7 @@ const App = () => {
   }
 
   function listen() {
+    console.log("Random word is: ", randomWord);
     if (!listenAnimate) {
       setListenAnimate(true);
       setTimeout(() => {
