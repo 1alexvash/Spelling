@@ -44,6 +44,9 @@ import X from "./sounds/X.mp3";
 import Y from "./sounds/Y.mp3";
 import Z from "./sounds/Z.mp3";
 
+import good from "./sounds/good.mp3";
+import bad from "./sounds/bad.mp3";
+
 const sounds = {
   A: A,
   B: B,
@@ -107,9 +110,6 @@ const App = () => {
       e.target.value = "";
       alert("Not correct");
     }
-    // console.log("randomWord:", randomWord);
-    // console.log("inputWord:", inputWord);
-    // console.log(letter);
   }
 
   function playSound(sound) {
