@@ -107,7 +107,8 @@ const App = () => {
       playSound("good");
 
       if (randomWord.length === 1) {
-        alert("Good next. Let's proceed to the next round");
+        setInputWord("");
+        setRandomWord(getRandomWord);
       }
     } else {
       e.target.value = "";
