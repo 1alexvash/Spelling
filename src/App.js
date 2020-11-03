@@ -74,6 +74,8 @@ const sounds = {
   X: X,
   Y: Y,
   Z: Z,
+  good: good,
+  bad: bad,
 };
 
 const ramdomWords = ["apple", "orange", "pear", "plumb", "kiwi"];
@@ -87,6 +89,7 @@ const App = () => {
   function getRandomWord() {
     const random = Math.floor(Math.random() * ramdomWords.length);
     const randomWord = ramdomWords[random];
+
     return randomWord;
   }
 
@@ -101,14 +104,14 @@ const App = () => {
       setInputWord(inputWord + e.target.value);
       setRandomWord(randomWord.substring(1));
       e.target.value = "";
-      alert("Correct");
+      playSound("good");
 
       if (randomWord.length === 1) {
         alert("Good next. Let's proceed to the next round");
       }
     } else {
       e.target.value = "";
-      alert("Not correct");
+      playSound("bad");
     }
   }
 
