@@ -83,8 +83,19 @@ const App = () => {
     // console.log(letter);
   }
 
+  function playSound(sound) {
+    const audio = new Audio(sound);
+    audio.currentTime = 0;
+    audio.play();
+    console.log(audio);
+  }
+
   function listen() {
     console.log("Random word is: ", randomWord);
+    console.log("First letter is: ", randomWord[0]);
+
+    playSound(A);
+
     if (!listenAnimate) {
       setListenAnimate(true);
       setTimeout(() => {
