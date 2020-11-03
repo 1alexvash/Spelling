@@ -44,6 +44,35 @@ import X from "./sounds/X.mp3";
 import Y from "./sounds/Y.mp3";
 import Z from "./sounds/Z.mp3";
 
+const sounds = {
+  A: A,
+  B: B,
+  C: C,
+  D: D,
+  E: E,
+  F: F,
+  G: G,
+  H: H,
+  I: I,
+  J: J,
+  K: K,
+  L: L,
+  M: M,
+  N: N,
+  O: O,
+  P: P,
+  Q: Q,
+  R: R,
+  S: S,
+  T: T,
+  U: U,
+  V: V,
+  W: W,
+  X: X,
+  Y: Y,
+  Z: Z,
+};
+
 const ramdomWords = ["apple", "orange", "pear", "plumb", "kiwi"];
 
 const App = () => {
@@ -84,7 +113,7 @@ const App = () => {
   }
 
   function playSound(sound) {
-    const audio = new Audio(sound);
+    const audio = new Audio(sounds[sound]);
     audio.currentTime = 0;
     audio.play();
     console.log(audio);
@@ -94,7 +123,7 @@ const App = () => {
     console.log("Random word is: ", randomWord);
     console.log("First letter is: ", randomWord[0]);
 
-    playSound(A);
+    playSound(randomWord[0].toUpperCase());
 
     if (!listenAnimate) {
       setListenAnimate(true);
@@ -140,42 +169,3 @@ const App = () => {
 };
 
 export default App;
-
-const sounds = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-];
