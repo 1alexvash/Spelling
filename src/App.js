@@ -116,20 +116,22 @@ const App = () => {
     const audio = new Audio(sounds[sound]);
     audio.currentTime = 0;
     audio.play();
-    console.log(audio);
   }
 
   function listen() {
-    console.log("Random word is: ", randomWord);
-    console.log("First letter is: ", randomWord[0]);
-
-    playSound(randomWord[0].toUpperCase());
-
     if (!listenAnimate) {
       setListenAnimate(true);
       setTimeout(() => {
         setListenAnimate(false);
-      }, 4000);
+      }, 1000 * randomWord.length);
+    } else {
+      return;
+    }
+
+    for (let index = 0; index < randomWord.length; index++) {
+      setTimeout(() => {
+        playSound(randomWord[index].toUpperCase());
+      }, 1000 * index);
     }
   }
 
