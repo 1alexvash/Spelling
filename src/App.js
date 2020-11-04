@@ -119,20 +119,22 @@ const App = () => {
   }
 
   function listen() {
-    console.log(randomWord);
+    // Maybe refactor the following code so I don't to use the fullWord variable
+    const fullWord = inputWord + randomWord;
+
     if (!listenAnimate) {
       input.current.focus();
       setListenAnimate(true);
       setTimeout(() => {
         setListenAnimate(false);
-      }, 1000 * randomWord.length);
+      }, 1000 * fullWord.length);
     } else {
       return;
     }
 
-    for (let index = 0; index < randomWord.length; index++) {
+    for (let index = 0; index < fullWord.length; index++) {
       setTimeout(() => {
-        playSound(randomWord[index].toUpperCase());
+        playSound(fullWord[index].toUpperCase());
       }, 1000 * index);
     }
   }
