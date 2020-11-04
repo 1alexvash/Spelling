@@ -132,7 +132,7 @@ const App = () => {
       setListenAnimate(true);
       setTimeout(() => {
         setListenAnimate(false);
-      }, 1000 * fullWord.length);
+      }, 1500 * fullWord.length);
     } else {
       return;
     }
@@ -140,7 +140,7 @@ const App = () => {
     for (let index = 0; index < fullWord.length; index++) {
       setTimeout(() => {
         playSound(fullWord[index].toUpperCase());
-      }, 1000 * index);
+      }, 1500 * index);
     }
   }
 

@@ -2,12 +2,6 @@ Show transition animation from moving from one word to another
 Add button to turn off sounds on typing
 Add some success flashcard on finish the word
 Ability to turn off sounds on typing
-Probbably that's a good idea connecting the application to easy-peasy
-
-Points system
-Right letter +1
-Wrong letter -2
-Right word +5
 
 Sort json words by length
 
