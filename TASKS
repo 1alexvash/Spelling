@@ -1,14 +1,15 @@
-Show transition animation from moving from one word to another
+Import levels variable to the store
+Add difficulty variable [2000,1800,1600,1400,1200,1000,800,700,500,500]
+
+Level flash animation on level + Ding sound on the new level
+Prevent user from leveling down
+Show transition animation from moving from one word to another (squize down and squize up)
 Add button to turn off sounds on typing
 Add some success flashcard on finish the word
-Ability to turn off sounds on typing
 
-Sort json words by length
-
-Add paramter of difficulty and increase it with each level
-1000/900/800 speed of pronounciation
+Sort json words by length / OR don't show way too difficult word for beginners
 
 
-settings pop with extra settings like (names, cities, numbers)
+
 
 

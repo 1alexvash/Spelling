@@ -201,7 +201,7 @@ const App = () => {
 };
 
 export default () => (
-  <StoreProvider>
-    <App store={store} />
+  <StoreProvider store={store}>
+    <App />
   </StoreProvider>
 );

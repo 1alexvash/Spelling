@@ -2,8 +2,10 @@ import React from "react";
 
 import trophyImg from "../images/trophy.png";
 
+import { useStoreState } from "easy-peasy";
+
 const Trophy = ({ points }) => {
-  const levels = [0, 10, 20, 50, 75, 100, 150, 200, 300, 500];
+  const { levels } = useStoreState((state) => state);
   let level = null;
   let nextLevel = null;
 
