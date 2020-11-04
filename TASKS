@@ -1,5 +1,4 @@
-Import levels variable to the store
-Add difficulty variable [2000,1800,1600,1400,1200,1000,800,700,500,500]
+Add difficulty variable 
 
 Level flash animation on level + Ding sound on the new level
 Prevent user from leveling down

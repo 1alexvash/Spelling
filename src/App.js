@@ -49,7 +49,7 @@ import Z from "./sounds/Z.mp3";
 import good from "./sounds/good.mp3";
 import bad from "./sounds/bad.mp3";
 
-import { StoreProvider, useStoreActions } from "easy-peasy";
+import { StoreProvider, useStoreState, useStoreActions } from "easy-peasy";
 import store from "./store";
 
 const sounds = {
@@ -87,7 +87,10 @@ const App = () => {
   const [randomWord, setRandomWord] = useState(getRandomWord());
   const [inputWord, setInputWord] = useState("");
 
+  const { difficulty, level } = useStoreState((state) => state);
   const { setPoints } = useStoreActions((actions) => actions);
+
+  const speed = difficulty[level];
 
   const [listenAnimate, setListenAnimate] = useState(false);
 
@@ -136,7 +139,7 @@ const App = () => {
       setListenAnimate(true);
       setTimeout(() => {
         setListenAnimate(false);
-      }, 1500 * fullWord.length);
+      }, speed * fullWord.length);
     } else {
       return;
     }
@@ -144,7 +147,7 @@ const App = () => {
     for (let index = 0; index < fullWord.length; index++) {
       setTimeout(() => {
         playSound(fullWord[index].toUpperCase());
-      }, 1500 * index);
+      }, speed * index);
     }
   }
 

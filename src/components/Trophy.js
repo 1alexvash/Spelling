@@ -5,16 +5,7 @@ import trophyImg from "../images/trophy.png";
 import { useStoreState } from "easy-peasy";
 
 const Trophy = () => {
-  const { levels, points } = useStoreState((state) => state);
-  let level = null;
-  let nextLevel = null;
-
-  for (let i = 0; i < levels.length; i++) {
-    if (points >= levels[i]) {
-      level = i;
-      nextLevel = level + 1;
-    }
-  }
+  const { points, levels, level, nextLevel } = useStoreState((state) => state);
 
   function getProgress() {
     const pointsForLevelUp = levels[nextLevel] - levels[level];
