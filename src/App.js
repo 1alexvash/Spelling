@@ -103,8 +103,11 @@ const App = () => {
       playSound("good");
 
       if (randomWord.length === 1) {
-        setInputWord("");
-        setRandomWord(getRandomWord);
+        setTimeout(() => {
+          console.log("finished");
+          setInputWord("");
+          setRandomWord(getRandomWord);
+        }, 500);
       }
     } else {
       e.target.value = "";
