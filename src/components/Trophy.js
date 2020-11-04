@@ -4,8 +4,8 @@ import trophyImg from "../images/trophy.png";
 
 import { useStoreState } from "easy-peasy";
 
-const Trophy = ({ points }) => {
-  const { levels } = useStoreState((state) => state);
+const Trophy = () => {
+  const { levels, points } = useStoreState((state) => state);
   let level = null;
   let nextLevel = null;
 

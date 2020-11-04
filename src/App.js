@@ -49,7 +49,7 @@ import Z from "./sounds/Z.mp3";
 import good from "./sounds/good.mp3";
 import bad from "./sounds/bad.mp3";
 
-import { StoreProvider } from "easy-peasy";
+import { StoreProvider, useStoreActions } from "easy-peasy";
 import store from "./store";
 
 const sounds = {
@@ -86,7 +86,8 @@ const sounds = {
 const App = () => {
   const [randomWord, setRandomWord] = useState(getRandomWord());
   const [inputWord, setInputWord] = useState("");
-  const [points, setPoints] = useState(0);
+
+  const { setPoints } = useStoreActions((actions) => actions);
 
   const [listenAnimate, setListenAnimate] = useState(false);
 
@@ -105,10 +106,10 @@ const App = () => {
       setRandomWord(randomWord.substring(1));
       e.target.value = "";
       playSound("good");
-      setPoints(points + 1);
+      setPoints(1);
       if (randomWord.length === 1) {
         setTimeout(() => {
-          setPoints(points + 5);
+          setPoints(5);
           setInputWord("");
           setRandomWord(getRandomWord);
         }, 750);
@@ -116,7 +117,7 @@ const App = () => {
     } else {
       e.target.value = "";
       playSound("bad");
-      setPoints(points - 2);
+      setPoints(-2);
     }
   }
 
@@ -191,7 +192,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Trophy points={points} />
+      <Trophy />
       {listenButton}
       {tipComponent}
       {boxesComponent}
