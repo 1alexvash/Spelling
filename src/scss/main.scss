@@ -106,8 +106,37 @@ body {
       font-size: 32px;
       font-weight: bold;
       color: white;
+      text-shadow: 1px 2px 4px #333;
+
+      z-index: 1;
+
+      position: relative;
+      overflow: hidden;
       &.active {
-        background: linear-gradient(lightgreen, green);
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 200%;
+          height: 200%;
+          display: block;
+          border-radius: 50%;
+          background: radial-gradient(darken(lightgreen, 10%), green);
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          animation: flash 0.4s;
+          @keyframes flash {
+            from {
+              top: -75%;
+              left: -75%;
+            }
+            to {
+              top: 50%;
+              left: 50%;
+            }
+          }
+        }
       }
     }
   }

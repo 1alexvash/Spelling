@@ -159,11 +159,49 @@ body:before {
   font-size: 32px;
   font-weight: bold;
   color: white;
+  text-shadow: 1px 2px 4px #333;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
 }
 
-.App .boxes .box.active {
-  background: -webkit-gradient(linear, left top, left bottom, from(lightgreen), to(green));
-  background: linear-gradient(lightgreen, green);
+.App .boxes .box.active:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  display: block;
+  border-radius: 50%;
+  background: radial-gradient(#64e764, green);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+  -webkit-animation: flash 0.4s;
+          animation: flash 0.4s;
+}
+
+@-webkit-keyframes flash {
+  from {
+    top: -75%;
+    left: -75%;
+  }
+  to {
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@keyframes flash {
+  from {
+    top: -75%;
+    left: -75%;
+  }
+  to {
+    top: 50%;
+    left: 50%;
+  }
 }
 
 .App .input {
