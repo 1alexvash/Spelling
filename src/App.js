@@ -139,38 +139,55 @@ const App = () => {
     }
   }
 
+  const listenButton = (
+    <img
+      src={microImg}
+      alt=""
+      className={`listen ${listenAnimate ? "animate" : ""}`}
+      onClick={() => listen()}
+    />
+  );
+
+  // Maybe combine it with the previous one into a single one
+  const tipComponent = (
+    <div className={`tip ${listenAnimate ? "animate" : ""}`}>
+      Click to listen the word again
+    </div>
+  );
+
+  const boxesComponent = (
+    <div className="boxes">
+      {inputWord.split("").map((letter, index) => (
+        <div className="box active" key={index}>
+          {letter}
+        </div>
+      ))}
+      {randomWord.split("").map((letter, index) => (
+        <div className="box" key={index}>
+          ?
+        </div>
+      ))}
+    </div>
+  );
+
+  const inputComponent = (
+    <input
+      type="text"
+      autoFocus
+      className="input"
+      placeholder="Start typing"
+      onChange={(e) => typing(e)}
+      ref={input}
+    />
+  );
+
   return (
     <div className="App">
       <Trophy progress={30} />
-      <img
-        src={microImg}
-        alt=""
-        className={`listen ${listenAnimate ? "animate" : ""}`}
-        onClick={() => listen()}
-      />
-      <div className={`tip ${listenAnimate ? "animate" : ""}`}>
-        Click to listen the word again
-      </div>
-      <div className="boxes">
-        {inputWord.split("").map((letter, index) => (
-          <div className="box active" key={index}>
-            {letter}
-          </div>
-        ))}
-        {randomWord.split("").map((letter, index) => (
-          <div className="box" key={index}>
-            ?
-          </div>
-        ))}
-      </div>
-      <input
-        type="text"
-        autoFocus
-        className="input"
-        placeholder="Start typing"
-        onChange={(e) => typing(e)}
-        ref={input}
-      />
+      {listenButton}
+      {tipComponent}
+      {boxesComponent}
+      {inputComponent}
     </div>
   );
 };
