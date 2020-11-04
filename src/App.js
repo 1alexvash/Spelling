@@ -80,8 +80,6 @@ const sounds = {
   bad: bad,
 };
 
-const levels = [0, 10, 20, 35, 50, 75, 100, 150, 200, 250, 300, 500];
-
 const App = () => {
   const [randomWord, setRandomWord] = useState(getRandomWord());
   const [inputWord, setInputWord] = useState("");
@@ -190,7 +188,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Trophy progress={points} />
+      <Trophy points={points} />
       {listenButton}
       {tipComponent}
       {boxesComponent}
