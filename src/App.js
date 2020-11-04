@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 import "./scss/main.css";
 
@@ -86,6 +86,8 @@ const App = () => {
 
   const [listenAnimate, setListenAnimate] = useState(false);
 
+  const input = useRef("");
+
   function getRandomWord() {
     const random = Math.floor(Math.random() * ramdomWords.length);
     const randomWord = ramdomWords[random];
@@ -94,17 +96,11 @@ const App = () => {
   }
 
   function typing(e) {
-    console.log(randomWord.length);
-    if (randomWord.length === 0) {
-      alert("Functionality for changing new word is not implemented yet");
-      return;
-    }
-
     if (e.target.value === randomWord[0]) {
       setInputWord(inputWord + e.target.value);
       setRandomWord(randomWord.substring(1));
       e.target.value = "";
-      playSound("good");
+      playSound("bad");
 
       if (randomWord.length === 1) {
         setInputWord("");
@@ -112,7 +108,7 @@ const App = () => {
       }
     } else {
       e.target.value = "";
-      playSound("bad");
+      playSound("good");
     }
   }
 
@@ -124,6 +120,7 @@ const App = () => {
 
   function listen() {
     if (!listenAnimate) {
+      input.current.focus();
       setListenAnimate(true);
       setTimeout(() => {
         setListenAnimate(false);
@@ -169,6 +166,7 @@ const App = () => {
         className="input"
         placeholder="Start typing"
         onChange={(e) => typing(e)}
+        ref={input}
       />
     </div>
   );
