@@ -100,7 +100,7 @@ const App = () => {
       setInputWord(inputWord + e.target.value);
       setRandomWord(randomWord.substring(1));
       e.target.value = "";
-      playSound("bad");
+      playSound("good");
 
       if (randomWord.length === 1) {
         setInputWord("");
@@ -108,7 +108,7 @@ const App = () => {
       }
     } else {
       e.target.value = "";
-      playSound("good");
+      playSound("bad");
     }
   }
 
