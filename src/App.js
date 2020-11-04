@@ -119,6 +119,7 @@ const App = () => {
   }
 
   function listen() {
+    console.log(randomWord);
     if (!listenAnimate) {
       input.current.focus();
       setListenAnimate(true);

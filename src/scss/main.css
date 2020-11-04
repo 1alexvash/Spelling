@@ -118,6 +118,7 @@ body:before {
   transition: 1s;
   -webkit-transform: scale(0.85);
           transform: scale(0.85);
+  cursor: auto;
   -webkit-filter: brightness(85%);
           filter: brightness(85%);
 }
