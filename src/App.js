@@ -6,6 +6,8 @@ import Trophy from "./components/Trophy";
 
 import microImg from "./images/micro.png";
 
+import topWords from "./data/words_3000.json";
+
 import number_0 from "./sounds/number_0.mp3";
 import number_1 from "./sounds/number_1.mp3";
 import number_2 from "./sounds/number_2.mp3";
@@ -78,8 +80,6 @@ const sounds = {
   bad: bad,
 };
 
-const ramdomWords = ["apple", "orange", "pear", "plumb", "kiwi"];
-
 const App = () => {
   const [randomWord, setRandomWord] = useState(getRandomWord());
   const [inputWord, setInputWord] = useState("");
@@ -89,8 +89,8 @@ const App = () => {
   const input = useRef("");
 
   function getRandomWord() {
-    const random = Math.floor(Math.random() * ramdomWords.length);
-    const randomWord = ramdomWords[random];
+    const random = Math.floor(Math.random() * topWords.length);
+    const randomWord = topWords[random];
 
     return randomWord;
   }
