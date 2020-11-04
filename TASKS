@@ -1,8 +1,8 @@
-Show show transition animation from moving from one word to another
+Show transition animation from moving from one word to another
 Add button to turn off sounds on typing
-Focus input after clicking listening button
 Add some success flashcard on finish the word
 Ability to turn off sounds on typing
+Probbably that's a good idea connecting the application to easy-peasy
 
 Points system
 Right letter +1
@@ -17,15 +17,4 @@ Add paramter of difficulty and increase it with each level
 
 settings pop with extra settings like (names, cities, numbers)
 
-Levels system
 
-Level 1 = [0, 10]
-Level 2 = [10, 20]
-Level 3 = [20, 35]
-Level 4 = [35, 50]
-Level 5 = [50, 75]
-Level 6 = [75, 100]
-Level 7 = [100, 150]
-Level 8 = [200, 250]
-Level 9 = [250, 300]
-Level 10 = [300, 500]

@@ -91,6 +91,8 @@ body:before {
 }
 
 .App .trophy .bar .progress {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   height: 100%;
   background: linear-gradient(45deg, blue, #33ccff);
 }

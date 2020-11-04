@@ -80,9 +80,12 @@ const sounds = {
   bad: bad,
 };
 
+const levels = [0, 10, 20, 35, 50, 75, 100, 150, 200, 250, 300, 500];
+
 const App = () => {
   const [randomWord, setRandomWord] = useState(getRandomWord());
   const [inputWord, setInputWord] = useState("");
+  const [points, setPoints] = useState(0);
 
   const [listenAnimate, setListenAnimate] = useState(false);
 
@@ -101,17 +104,18 @@ const App = () => {
       setRandomWord(randomWord.substring(1));
       e.target.value = "";
       playSound("good");
-
+      setPoints(points + 1);
       if (randomWord.length === 1) {
         setTimeout(() => {
-          console.log("finished");
+          setPoints(points + 5);
           setInputWord("");
           setRandomWord(getRandomWord);
-        }, 500);
+        }, 750);
       }
     } else {
       e.target.value = "";
       playSound("bad");
+      setPoints(points - 2);
     }
   }
 
@@ -186,7 +190,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Trophy progress={30} />
+      <Trophy progress={points} />
       {listenButton}
       {tipComponent}
       {boxesComponent}
