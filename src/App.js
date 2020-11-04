@@ -49,6 +49,9 @@ import Z from "./sounds/Z.mp3";
 import good from "./sounds/good.mp3";
 import bad from "./sounds/bad.mp3";
 
+import { StoreProvider } from "easy-peasy";
+import store from "./store";
+
 const sounds = {
   A: A,
   B: B,
@@ -197,4 +200,8 @@ const App = () => {
   );
 };
 
-export default App;
+export default () => (
+  <StoreProvider>
+    <App store={store} />
+  </StoreProvider>
+);
