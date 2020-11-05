@@ -104,7 +104,8 @@ const App = () => {
   }
 
   function typing(e) {
-    if (e.target.value === randomWord[0]) {
+    e.target.value = e.target.value.toUpperCase();
+    if (e.target.value === randomWord[0].toUpperCase()) {
       setInputWord(inputWord + e.target.value);
       setRandomWord(randomWord.substring(1));
       e.target.value = "";
