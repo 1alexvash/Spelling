@@ -1,6 +1,6 @@
 # Spelling
 
-Practice English spelling and understand native
+Practice English spelling and understand native speakers
 
 ## Installing the project && running on the local machine
 
