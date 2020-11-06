@@ -1,4 +1,4 @@
-Save points state in the local storage
+rename level to the current level
 Prevent user from leveling down
 Level flash animation on level + Ding sound on the new level
 Show transition animation from moving from one word to another (squize down and squize up)

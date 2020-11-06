@@ -87,10 +87,10 @@ const App = () => {
   const [randomWord, setRandomWord] = useState(getRandomWord());
   const [inputWord, setInputWord] = useState("");
 
-  const { difficulty, level } = useStoreState((state) => state);
+  const { difficulty, currentLevel } = useStoreState((state) => state);
   const { setPoints } = useStoreActions((actions) => actions);
 
-  const speed = difficulty[level];
+  const speed = difficulty[currentLevel];
 
   const [listenAnimate, setListenAnimate] = useState(false);
 
