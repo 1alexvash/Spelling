@@ -7,13 +7,17 @@ const store = createStore({
   currentLevel: null,
   nextLevel: null,
   setPoints: action((state, payload) => {
-    state.points += payload;
-    localStorage.points = state.points;
-
     // prevent user from downgrading
-    if (payload <= 0) {
-      console.log("payload is negative");
-      console.log(state.levels[state.currentLevel]);
+    if (payload > 0) {
+      state.points += payload;
+      localStorage.points = state.points;
+    } else {
+      if (state.points + payload < state.levels[state.currentLevel]) {
+        return "";
+      } else {
+        state.points += payload;
+        localStorage.points = state.points;
+      }
     }
 
     for (let i = 0; i < state.levels.length; i++) {
