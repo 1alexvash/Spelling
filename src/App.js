@@ -159,9 +159,19 @@ const App = () => {
   const Sounds = (
     <div className="Sounds">
       {sound === "on" ? (
-        <img src={soundOn} onClick={() => setSound("off")} alt="" />
+        <img
+          src={soundOn}
+          className="sound-on"
+          onClick={() => setSound("off")}
+          alt=""
+        />
       ) : (
-        <img src={soundOff} onClick={() => setSound("on")} alt="" />
+        <img
+          src={soundOff}
+          className="sound-off"
+          onClick={() => setSound("on")}
+          alt=""
+        />
       )}
     </div>
   );

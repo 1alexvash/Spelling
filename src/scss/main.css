@@ -117,9 +117,64 @@ body:before {
   right: 15px;
 }
 
-.App .Sounds img {
+.App .Sounds .sound-on,
+.App .Sounds .sound-off {
   cursor: pointer;
   width: 40px;
+}
+
+.App .Sounds .sound-on {
+  -webkit-animation: showSoundOn 1s;
+          animation: showSoundOn 1s;
+}
+
+@-webkit-keyframes showSoundOn {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes showSoundOn {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.App .Sounds .sound-off {
+  -webkit-animation: showSoundOff 1s;
+          animation: showSoundOff 1s;
+}
+
+@-webkit-keyframes showSoundOff {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes showSoundOff {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .App .listen {

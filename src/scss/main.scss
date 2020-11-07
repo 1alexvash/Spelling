@@ -81,9 +81,32 @@ body {
     position: absolute;
     top: 15px;
     right: 15px;
-    img {
+    .sound-on,
+    .sound-off {
       cursor: pointer;
       width: 40px;
+    }
+    .sound-on {
+      animation: showSoundOn 1s;
+      @keyframes showSoundOn {
+        from {
+          transform: scale(0.5);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    }
+    .sound-off {
+      animation: showSoundOff 1s;
+      @keyframes showSoundOff {
+        from {
+          transform: scale(0.5);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
     }
   }
   .listen {
