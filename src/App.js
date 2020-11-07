@@ -52,6 +52,9 @@ import bad from "./sounds/bad.mp3";
 import { StoreProvider, useStoreState, useStoreActions } from "easy-peasy";
 import store from "./store";
 
+import soundOn from "./images/sound-on.png";
+import soundOff from "./images/sound-off.png";
+
 const sounds = {
   A: A,
   B: B,
@@ -86,6 +89,7 @@ const sounds = {
 const App = () => {
   const [randomWord, setRandomWord] = useState(getRandomWord());
   const [inputWord, setInputWord] = useState("");
+  const [sound, setSound] = useState("on");
 
   const { difficulty, currentLevel } = useStoreState((state) => state);
   const { setPoints } = useStoreActions((actions) => actions);
@@ -152,6 +156,16 @@ const App = () => {
     }
   }
 
+  const Sounds = (
+    <div className="Sounds">
+      {sound === "on" ? (
+        <img src={soundOn} onClick={() => setSound("off")} alt="" />
+      ) : (
+        <img src={soundOff} onClick={() => setSound("on")} alt="" />
+      )}
+    </div>
+  );
+
   const listenButton = (
     <img
       src={microImg}
@@ -197,6 +211,7 @@ const App = () => {
   return (
     <div className="App">
       <Trophy />
+      {Sounds}
       {listenButton}
       {tipComponent}
       {boxesComponent}

@@ -111,6 +111,17 @@ body:before {
   background: linear-gradient(45deg, blue, #33ccff);
 }
 
+.App .Sounds {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.App .Sounds img {
+  cursor: pointer;
+  width: 40px;
+}
+
 .App .listen {
   cursor: pointer;
   width: 96px;
