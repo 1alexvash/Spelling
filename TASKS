@@ -1,3 +1,5 @@
+Move sounds into a separate component
+Move sound functionality to the redux-store
 Level flash animation on level + Ding sound on the new level
 Show transition animation from moving from one word to another (squize down and squize up)
 Add button to turn off sounds on typing

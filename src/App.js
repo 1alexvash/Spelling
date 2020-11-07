@@ -129,13 +129,14 @@ const App = () => {
     }
   }
 
-  function playSound(sound) {
+  function playSound(melody) {
     if (sound === "off") {
       console.log("sound is turned off");
+      if (melody === "good" || melody === "bad") {
+        return;
+      }
     }
-    if (sound === "good" || sound === "bad") {
-    }
-    const audio = new Audio(sounds[sound]);
+    const audio = new Audio(sounds[melody]);
     audio.currentTime = 0;
     audio.play();
   }
