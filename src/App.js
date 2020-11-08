@@ -8,16 +8,16 @@ import microImg from "./images/micro.png";
 
 import topWords from "./data/words_3000.json";
 
-import number_0 from "./sounds/number_0.mp3";
-import number_1 from "./sounds/number_1.mp3";
-import number_2 from "./sounds/number_2.mp3";
-import number_3 from "./sounds/number_3.mp3";
-import number_4 from "./sounds/number_4.mp3";
-import number_5 from "./sounds/number_5.mp3";
-import number_6 from "./sounds/number_6.mp3";
-import number_7 from "./sounds/number_7.mp3";
-import number_8 from "./sounds/number_8.mp3";
-import number_9 from "./sounds/number_9.mp3";
+// import number_0 from "./sounds/number_0.mp3";
+// import number_1 from "./sounds/number_1.mp3";
+// import number_2 from "./sounds/number_2.mp3";
+// import number_3 from "./sounds/number_3.mp3";
+// import number_4 from "./sounds/number_4.mp3";
+// import number_5 from "./sounds/number_5.mp3";
+// import number_6 from "./sounds/number_6.mp3";
+// import number_7 from "./sounds/number_7.mp3";
+// import number_8 from "./sounds/number_8.mp3";
+// import number_9 from "./sounds/number_9.mp3";
 
 import A from "./sounds/A.mp3";
 import B from "./sounds/B.mp3";
