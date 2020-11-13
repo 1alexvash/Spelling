@@ -1,11 +1,28 @@
 import { createStore, action } from "easy-peasy";
 
+import sounds from "./sounds/sounds";
+
 const store = createStore({
   levels: [0, 10, 20, 50, 75, 100, 150, 200, 300, 500],
   difficulty: [2000, 1800, 1600, 1400, 1200, 1000, 800, 700, 500, 500],
   points: localStorage.points ? JSON.parse(localStorage.points) : 0,
   currentLevel: null,
   nextLevel: null,
+  sound: "on",
+  setSound: action((state, payload) => {
+    state.sound = payload;
+  }),
+  playSound: action((state, melody) => {
+    if (state.sound === "off") {
+      console.log("sound is turned off");
+      if (melody === "good" || melody === "bad") {
+        return;
+      }
+    }
+    const audio = new Audio(sounds[melody]);
+    audio.currentTime = 0;
+    audio.play();
+  }),
   setPoints: action((state, payload) => {
     // prevent user from downgrading
     if (payload > 0) {

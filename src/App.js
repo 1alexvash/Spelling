@@ -14,15 +14,14 @@ import store from "./store";
 import soundOn from "./images/sound-on.png";
 import soundOff from "./images/sound-off.png";
 
-import sounds from "./sounds/sounds";
-
 const App = () => {
   const [randomWord, setRandomWord] = useState(getRandomWord());
   const [inputWord, setInputWord] = useState("");
-  const [sound, setSound] = useState("on");
 
-  const { difficulty, currentLevel } = useStoreState((state) => state);
-  const { setPoints } = useStoreActions((actions) => actions);
+  const { sound, difficulty, currentLevel } = useStoreState((state) => state);
+  const { setSound, setPoints, playSound } = useStoreActions(
+    (actions) => actions
+  );
 
   const speed = difficulty[currentLevel];
 
@@ -57,18 +56,6 @@ const App = () => {
       playSound("bad");
       setPoints(-2);
     }
-  }
-
-  function playSound(melody) {
-    if (sound === "off") {
-      console.log("sound is turned off");
-      if (melody === "good" || melody === "bad") {
-        return;
-      }
-    }
-    const audio = new Audio(sounds[melody]);
-    audio.currentTime = 0;
-    audio.play();
   }
 
   function listen() {
