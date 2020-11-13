@@ -8,83 +8,13 @@ import microImg from "./images/micro.png";
 
 import topWords from "./data/words_3000.json";
 
-// import number_0 from "./sounds/number_0.mp3";
-// import number_1 from "./sounds/number_1.mp3";
-// import number_2 from "./sounds/number_2.mp3";
-// import number_3 from "./sounds/number_3.mp3";
-// import number_4 from "./sounds/number_4.mp3";
-// import number_5 from "./sounds/number_5.mp3";
-// import number_6 from "./sounds/number_6.mp3";
-// import number_7 from "./sounds/number_7.mp3";
-// import number_8 from "./sounds/number_8.mp3";
-// import number_9 from "./sounds/number_9.mp3";
-
-import A from "./sounds/A.mp3";
-import B from "./sounds/B.mp3";
-import C from "./sounds/C.mp3";
-import D from "./sounds/D.mp3";
-import E from "./sounds/E.mp3";
-import F from "./sounds/F.mp3";
-import G from "./sounds/G.mp3";
-import H from "./sounds/H.mp3";
-import I from "./sounds/I.mp3";
-import J from "./sounds/J.mp3";
-import K from "./sounds/K.mp3";
-import L from "./sounds/L.mp3";
-import M from "./sounds/M.mp3";
-import N from "./sounds/N.mp3";
-import O from "./sounds/O.mp3";
-import P from "./sounds/P.mp3";
-import Q from "./sounds/Q.mp3";
-import R from "./sounds/R.mp3";
-import S from "./sounds/S.mp3";
-import T from "./sounds/T.mp3";
-import U from "./sounds/U.mp3";
-import V from "./sounds/V.mp3";
-import W from "./sounds/W.mp3";
-import X from "./sounds/X.mp3";
-import Y from "./sounds/Y.mp3";
-import Z from "./sounds/Z.mp3";
-
-import good from "./sounds/good.mp3";
-import bad from "./sounds/bad.mp3";
-
 import { StoreProvider, useStoreState, useStoreActions } from "easy-peasy";
 import store from "./store";
 
 import soundOn from "./images/sound-on.png";
 import soundOff from "./images/sound-off.png";
 
-const sounds = {
-  A: A,
-  B: B,
-  C: C,
-  D: D,
-  E: E,
-  F: F,
-  G: G,
-  H: H,
-  I: I,
-  J: J,
-  K: K,
-  L: L,
-  M: M,
-  N: N,
-  O: O,
-  P: P,
-  Q: Q,
-  R: R,
-  S: S,
-  T: T,
-  U: U,
-  V: V,
-  W: W,
-  X: X,
-  Y: Y,
-  Z: Z,
-  good: good,
-  bad: bad,
-};
+import sounds from "./sounds/sounds";
 
 const App = () => {
   const [randomWord, setRandomWord] = useState(getRandomWord());
