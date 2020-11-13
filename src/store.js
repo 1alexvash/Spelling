@@ -8,9 +8,10 @@ const store = createStore({
   points: localStorage.points ? JSON.parse(localStorage.points) : 0,
   currentLevel: null,
   nextLevel: null,
-  sound: "on",
+  sound: localStorage.sound ? localStorage.sound : "on",
   setSound: action((state, payload) => {
     state.sound = payload;
+    localStorage.sound = payload;
   }),
   playSound: action((state, melody) => {
     if (state.sound === "off") {
