@@ -1,10 +1,14 @@
 import React, { useState, useRef } from "react";
 
+import Sounds from "./components/Sounds";
+import ListenButton from "./components/ListenButton";
+import Tip from "./components/Tip";
+import Boxes from "./components/Boxes";
+import Input from "./components/Input";
+
 import "./scss/main.css";
 
 import Trophy from "./components/Trophy";
-
-import microImg from "./images/micro.png";
 
 import topWords from "./data/words_3000.json";
 
@@ -79,76 +83,19 @@ const App = () => {
     }
   }
 
-  const Sounds = (
-    <div className="Sounds">
-      {sound === "on" ? (
-        <img
-          src={soundOn}
-          className="sound-on"
-          onClick={() => setSound("off")}
-          alt=""
-        />
-      ) : (
-        <img
-          src={soundOff}
-          className="sound-off"
-          onClick={() => setSound("on")}
-          alt=""
-        />
-      )}
-    </div>
-  );
-
-  const listenButton = (
-    <img
-      src={microImg}
-      alt=""
-      className={`listen ${listenAnimate ? "animate" : ""}`}
-      onClick={() => listen()}
-    />
-  );
-
-  // Maybe combine it with the previous one into a single one
-  const tipComponent = (
-    <div className={`tip ${listenAnimate ? "animate" : ""}`}>
-      Click to listen the word again
-    </div>
-  );
-
-  const boxesComponent = (
-    <div className="boxes">
-      {inputWord.split("").map((letter, index) => (
-        <div className="box active" key={index}>
-          {letter}
-        </div>
-      ))}
-      {randomWord.split("").map((letter, index) => (
-        <div className="box" key={index}>
-          ?
-        </div>
-      ))}
-    </div>
-  );
-
-  const inputComponent = (
-    <input
-      type="text"
-      autoFocus
-      className="input"
-      placeholder="Start typing"
-      onChange={(e) => typing(e)}
-      ref={input}
-    />
-  );
-
   return (
     <div className="App">
       <Trophy />
-      {Sounds}
-      {listenButton}
-      {tipComponent}
-      {boxesComponent}
-      {inputComponent}
+      <Sounds
+        sound={sound}
+        soundOn={soundOn}
+        soundOff={soundOff}
+        setSound={setSound}
+      />
+      <ListenButton listenAnimate={listenAnimate} listen={listen} />
+      <Tip listenAnimate={listenAnimate} />
+      <Boxes inputWord={inputWord} randomWord={randomWord} />
+      <Input typing={typing} input={input} />
     </div>
   );
 };
