@@ -1,6 +1,14 @@
 import React from "react";
 
-const Sounds = ({ sound, soundOn, soundOff, setSound }) => {
+import soundOn from "../images/sound-on.png";
+import soundOff from "../images/sound-off.png";
+
+import { useStoreState, useStoreActions } from "easy-peasy";
+
+const Sounds = () => {
+  const { sound } = useStoreState((state) => state);
+  const { setSound } = useStoreActions((actions) => actions);
+
   return (
     <div className="Sounds">
       {sound === "on" ? (

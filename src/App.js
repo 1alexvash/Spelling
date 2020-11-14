@@ -15,17 +15,12 @@ import topWords from "./data/words_3000.json";
 import { StoreProvider, useStoreState, useStoreActions } from "easy-peasy";
 import store from "./store";
 
-import soundOn from "./images/sound-on.png";
-import soundOff from "./images/sound-off.png";
-
 const App = () => {
   const [randomWord, setRandomWord] = useState(getRandomWord());
   const [inputWord, setInputWord] = useState("");
 
-  const { sound, difficulty, currentLevel } = useStoreState((state) => state);
-  const { setSound, setPoints, playSound } = useStoreActions(
-    (actions) => actions
-  );
+  const { difficulty, currentLevel } = useStoreState((state) => state);
+  const { setPoints, playSound } = useStoreActions((actions) => actions);
 
   const speed = difficulty[currentLevel];
 
@@ -86,12 +81,7 @@ const App = () => {
   return (
     <div className="App">
       <Trophy />
-      <Sounds
-        sound={sound}
-        soundOn={soundOn}
-        soundOff={soundOff}
-        setSound={setSound}
-      />
+      <Sounds />
       <ListenButton listenAnimate={listenAnimate} listen={listen} />
       <Tip listenAnimate={listenAnimate} />
       <Boxes inputWord={inputWord} randomWord={randomWord} />
