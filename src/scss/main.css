@@ -111,6 +111,31 @@ body:before {
   background: linear-gradient(45deg, blue, #33ccff);
 }
 
+.App .language-switch {
+  position: absolute;
+  top: 10px;
+  right: 70px;
+}
+
+.App .language-switch img {
+  cursor: pointer;
+  display: block;
+  width: 55px;
+  margin-bottom: 10px;
+  border: 1px solid grey;
+  -webkit-box-shadow: 1px 2px 10px black;
+          box-shadow: 1px 2px 10px black;
+  border-radius: 4px;
+}
+
+.App .language-switch img .active {
+  border: 2px solid red;
+}
+
+.App .language-switch img.not-active {
+  border: 2px solid #1ec71e;
+}
+
 .App .Sounds {
   position: absolute;
   top: 15px;

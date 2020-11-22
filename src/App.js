@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 
+import Trophy from "./components/Trophy";
+import LanguageSwitch from "./components/LanguageSwitch";
 import Sounds from "./components/Sounds";
 import ListenButton from "./components/ListenButton";
 import Tip from "./components/Tip";
@@ -7,8 +9,6 @@ import Boxes from "./components/Boxes";
 import Input from "./components/Input";
 
 import "./scss/main.css";
-
-import Trophy from "./components/Trophy";
 
 import topWords from "./data/words_3000.json";
 
@@ -81,6 +81,7 @@ const App = () => {
   return (
     <div className="App">
       <Trophy />
+      <LanguageSwitch />
       <Sounds />
       <ListenButton listenAnimate={listenAnimate} listen={listen} />
       <Tip listenAnimate={listenAnimate} />

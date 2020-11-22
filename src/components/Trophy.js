@@ -25,7 +25,10 @@ const Trophy = () => {
   return (
     <div className="trophy">
       <img src={trophyImg} alt="" />
-      <div className="level" title="Current level:">
+      <div
+        className="level"
+        title={`Current level ${currentLevel}. With every level the game gets more difficult`}
+      >
         {currentLevel + 1}
       </div>
       <div className="bar">

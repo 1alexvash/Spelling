@@ -1,10 +1,9 @@
 Flash animation on level app
 Show transition animation from moving from one word to another (squize down and squize up)
-Add button to turn off sounds on typing
 Add some success flashcard on finish the word
-
+Change audio to different speaker
+add future feature for changing langauges
 Sort json words by length / OR don't show way too difficult word for beginners
-Fix github deploy
 
 
 
