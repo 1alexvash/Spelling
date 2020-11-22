@@ -80,20 +80,22 @@ body {
   .language-switch {
     position: absolute;
     top: 10px;
-    right: 70px;
+    right: 65px;
     img {
-      cursor: pointer;
       display: block;
-      width: 55px;
+      width: 50px;
       margin-bottom: 10px;
       border: 1px solid grey;
       box-shadow: 1px 2px 15px rgba(black, 0.7);
       border-radius: 4px;
+      transition: 0.3s;
       &.active {
-        border: 2px solid red;
+        border: 1px solid green;
       }
       &.not-active {
-        border: 2px solid darken(lightgreen, 35%);
+        cursor: pointer;
+        border: 1px solid red;
+        opacity: 0.7;
       }
     }
   }

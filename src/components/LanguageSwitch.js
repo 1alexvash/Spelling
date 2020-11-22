@@ -11,11 +11,15 @@ const LanguageSwitch = () => {
       <img
         src={britishFlagImg}
         className={language === "American" ? "active" : "not-active"}
+        onClick={() => setLanguage("British")}
+        title="British Pronunciation"
         alt=""
       />
       <img
         src={americanFlagImg}
         className={language === "British" ? "active" : "not-active"}
+        onClick={() => setLanguage("American")}
+        title="American Pronunciation"
         alt=""
       />
     </div>
