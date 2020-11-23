@@ -3,8 +3,11 @@ import React, { useState } from "react";
 import britishFlagImg from "../images/british_flag.png";
 import americanFlagImg from "../images/american_flag.png";
 
+import { useStoreState, useStoreActions } from "easy-peasy";
+
 const LanguageSwitch = () => {
-  const [language, setLanguage] = useState("American");
+  const { language } = useStoreState((state) => state);
+  const { setLanguage } = useStoreActions((actions) => actions);
 
   return (
     <div className="language-switch">

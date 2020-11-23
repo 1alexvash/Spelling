@@ -8,6 +8,11 @@ const store = createStore({
   points: localStorage.points ? JSON.parse(localStorage.points) : 0,
   currentLevel: null,
   nextLevel: null,
+  language: localStorage.language ? localStorage.language : "American",
+  setLanguage: action((state, payload) => {
+    state.language = payload;
+    localStorage.language = payload;
+  }),
   sound: localStorage.sound ? localStorage.sound : "on",
   setSound: action((state, payload) => {
     state.sound = payload;
