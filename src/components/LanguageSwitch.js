@@ -10,14 +10,14 @@ const LanguageSwitch = () => {
     <div className="language-switch">
       <img
         src={britishFlagImg}
-        className={language === "American" ? "active" : "not-active"}
+        className={language === "British" ? "active" : "not-active"}
         onClick={() => setLanguage("British")}
         title="British Pronunciation"
         alt=""
       />
       <img
         src={americanFlagImg}
-        className={language === "British" ? "active" : "not-active"}
+        className={language === "American" ? "active" : "not-active"}
         onClick={() => setLanguage("American")}
         title="American Pronunciation"
         alt=""
