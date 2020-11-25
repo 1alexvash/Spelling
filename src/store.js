@@ -20,7 +20,6 @@ const store = createStore({
   }),
   playSound: action((state, melody) => {
     if (state.sound === "off") {
-      console.log("sound is turned off");
       if (melody === "good" || melody === "bad" || melody === "new_level") {
         return;
       }

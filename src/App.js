@@ -19,7 +19,9 @@ const App = () => {
   const [randomWord, setRandomWord] = useState(getRandomWord());
   const [inputWord, setInputWord] = useState("");
 
-  const { difficulty, currentLevel } = useStoreState((state) => state);
+  const { language, difficulty, currentLevel } = useStoreState(
+    (state) => state
+  );
   const { setPoints, playSound } = useStoreActions((actions) => actions);
 
   const speed = difficulty[currentLevel];
@@ -73,7 +75,7 @@ const App = () => {
 
     for (let index = 0; index < fullWord.length; index++) {
       setTimeout(() => {
-        playSound(fullWord[index].toUpperCase());
+        playSound(`${fullWord[index].toUpperCase()}_${language.toLowerCase()}`);
       }, speed * index);
     }
   }
