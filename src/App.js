@@ -25,7 +25,7 @@ const App = () => {
   const [randomWord, setRandomWord] = useState("");
   const [inputWord, setInputWord] = useState("");
 
-  const { language, difficulty, currentLevel } = useStoreState(
+  const { language, difficulty, currentLevel, nextLevel } = useStoreState(
     (state) => state
   );
   const { setPoints, playSound } = useStoreActions((actions) => actions);
@@ -37,7 +37,8 @@ const App = () => {
   const input = useRef("");
 
   function getRandomWord() {
-    const random = Math.floor(Math.random() * topWords.length);
+    const difficulty = (topWords.length / 10) * nextLevel;
+    const random = Math.floor(Math.random() * difficulty);
     const randomWord = topWords[random];
 
     return randomWord;
