@@ -38,6 +38,7 @@ const App = () => {
 
   function getRandomWord() {
     const difficulty = (topWords.length / 10) * nextLevel;
+
     const random = Math.floor(Math.random() * difficulty);
     const randomWord = topWords[random];
 

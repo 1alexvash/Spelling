@@ -256,6 +256,33 @@ body:before {
           justify-content: space-between;
 }
 
+.App .boxes.squize {
+  -webkit-animation: 0.7s squize;
+          animation: 0.7s squize;
+}
+
+@-webkit-keyframes squize {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes squize {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .App .boxes .box {
   width: 40px;
   height: 40px;
