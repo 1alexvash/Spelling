@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Trophy from "./components/Trophy";
 import LanguageSwitch from "./components/LanguageSwitch";
@@ -15,8 +15,14 @@ import topWords from "./data/words_3000.json";
 import { StoreProvider, useStoreState, useStoreActions } from "easy-peasy";
 import store from "./store";
 
+topWords.sort(function (a, b) {
+  // ASC  -> a.length - b.length
+  // DESC -> b.length - a.length
+  return a.length - b.length;
+});
+
 const App = () => {
-  const [randomWord, setRandomWord] = useState(getRandomWord());
+  const [randomWord, setRandomWord] = useState("");
   const [inputWord, setInputWord] = useState("");
 
   const { language, difficulty, currentLevel } = useStoreState(
@@ -33,7 +39,6 @@ const App = () => {
   function getRandomWord() {
     const random = Math.floor(Math.random() * topWords.length);
     const randomWord = topWords[random];
-    console.log("randomWord:", randomWord);
 
     return randomWord;
   }
@@ -80,6 +85,11 @@ const App = () => {
       }, speed * index);
     }
   }
+
+  useEffect(() => {
+    setRandomWord(getRandomWord());
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div className="App">

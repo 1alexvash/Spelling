@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import britishFlagImg from "../images/british_flag.png";
 import americanFlagImg from "../images/american_flag.png";
