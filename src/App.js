@@ -33,6 +33,7 @@ const App = () => {
   function getRandomWord() {
     const random = Math.floor(Math.random() * topWords.length);
     const randomWord = topWords[random];
+    console.log("randomWord:", randomWord);
 
     return randomWord;
   }

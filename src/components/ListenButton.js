@@ -9,6 +9,7 @@ const listenButton = ({ listenAnimate, listen }) => {
       alt=""
       className={`listen ${listenAnimate ? "animate" : ""}`}
       onClick={() => listen()}
+      title="Click to listen the word"
     />
   );
 };

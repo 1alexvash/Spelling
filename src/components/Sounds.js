@@ -17,6 +17,7 @@ const Sounds = () => {
           className="sound-on"
           onClick={() => setSound("off")}
           alt=""
+          title="Click to turn off system sounds"
         />
       ) : (
         <img
@@ -24,6 +25,7 @@ const Sounds = () => {
           className="sound-off"
           onClick={() => setSound("on")}
           alt=""
+          title="Click to turn on system sounds"
         />
       )}
     </div>
